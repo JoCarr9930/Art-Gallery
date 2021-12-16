@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Gallery = () => {
+const NotFound = () => {
     return (
         <div>
-            Gallery
+            404!
         </div>
     )
 }
 
-export default Gallery
+export default NotFound
