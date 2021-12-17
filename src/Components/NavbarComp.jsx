@@ -1,6 +1,4 @@
 import React from "react";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { AiOutlineFacebook } from "react-icons/ai";
 import { GiChargingBull } from "react-icons/gi";
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
@@ -16,7 +14,7 @@ const Nav = styled.nav`
   z-index: 10;
 `;
 const NavLink = styled(Link)`
-  color: white;
+  color: #8F8389;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -26,7 +24,7 @@ const NavLink = styled(Link)`
   cursor: pointer;
 
   &.active {
-    color: blue;
+    color: white;
   }
 `;
 
@@ -63,18 +61,20 @@ const NavbarComp = () => {
   return (
     <>
       <Nav>
-        <NavLink to="/">
-          <Logo><GiChargingBull size={40} /></Logo>
-        </NavLink>
-        <Burger />
-        <NavMenu>
-          <NavLink to="/about" activeStyle>
-            About
+          <NavLink to="/">
+            <Logo>
+              <GiChargingBull size={40} />
+            </Logo>
           </NavLink>
-          <NavLink to="/art" activeStyle>
-            Art
-          </NavLink>
-        </NavMenu>
+          <Burger />
+          <NavMenu>
+            <NavLink to="/about" activeStyle>
+              About
+            </NavLink>
+            <NavLink to="/art" activeStyle>
+              Art
+            </NavLink>
+          </NavMenu>
       </Nav>
     </>
   );

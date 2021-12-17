@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import NavbarComp from "./Components/NavbarComp";
+import Footer from "./Components/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -17,6 +18,7 @@ function App() {
         <Route path="/art" exact component={Gallery}/>
         <Route component={NotFound}/>
       </Switch>
+      <Footer/>
     </Router>
   );
 }
