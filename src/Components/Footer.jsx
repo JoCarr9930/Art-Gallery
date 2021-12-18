@@ -42,7 +42,6 @@ const Footer = () => {
     <FooterContainer>
       <Name>Mauricio Carrizales &copy;</Name>
       <Media>
-        {/* <Icon></Icon> */}
         <Icon href="https://www.facebook.com"><AiOutlineFacebook size={20}/></Icon>
       </Media>
     </FooterContainer>
