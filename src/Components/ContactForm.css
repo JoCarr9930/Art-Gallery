@@ -1,0 +1,35 @@
+input {
+  color: #fffffa;
+  background: #fffffa;
+  border: 2px solid #000103;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin-bottom: 1.5rem;
+}
+
+textarea {
+  color: #fffffa;
+  background: #fffffa;
+  border: 2px solid #000103;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  color: #000103;
+  background: #fffffa;
+  border: 2px solid #000103;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+button:hover {
+  color: #fffffa;
+  opacity: 0.9;
+  background: #000103;
+  border: 2px solid #000103;
+}

@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import AboutSection from '../Components/AboutSection'
+import ContactForm from '../Components/ContactForm';
 
 const About = () => {
     return (
-        <div>
-            About
-        </div>
+        <>
+        <AboutSection/>
+        <ContactForm/>
+        </>
     )
 }
 

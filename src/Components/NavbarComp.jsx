@@ -1,43 +1,46 @@
-import React from "react";
+import React, {useState} from "react";
 import { GiChargingBull } from "react-icons/gi";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
   height: 10vh;
   display: flex;
-  background: rgba(0, 0, 0, 0.9);
-  width: 100%;
-  justify-content: flex-start;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
-  z-index: 10;
+  padding: 0 2rem;
+  background: #000103;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
 `;
+
 const NavLink = styled(Link)`
-  color: #8F8389;
+  color: #FFFFFA;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
-  margin-right: 5rem;
   height: 100%;
+  padding: 15px 30px;
   cursor: pointer;
 
-  &.active {
-    color: white;
+  
+  &:hover {
+    border-bottom: 3px solid #4A6FA5;
+    color: #4A6FA5;
+  }
+
+  @media screen and (max-width: 504px) {
+    height: 20%;
+    padding: 0px 30px;
   }
 `;
 
-const Burger = styled(FaBars)`
+const Burger = styled.div`
   display: none;
   color: white;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 504px) {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
     font-size: 1.8rem;
     cursor: pointer;
   }
@@ -46,35 +49,54 @@ const Burger = styled(FaBars)`
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  width: 100vw;
+  margin: 0 5rem;
 
-  @media screen and (max-width: 768px) {
-    display: none;
+  @media screen and (max-width: 504px) {
+    position: absolute;
+    flex-direction: column;
+    top: 8vh;
+    left: ${({click})=>(click ? 0 : '-100%')};
+    background: #000103;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    transition: all 150ms ease-in-out;
   }
 `;
 
-const Logo = styled.div`
-  color: white;
+const Logo = styled.a`
+  color: #FFFFFA;
+  cursor: pointer;
 `;
 
 const NavbarComp = () => {
+const [click, setClick] = useState(false);
+
+const ChangeClick = ()=>{
+  setClick(!click);
+}
   return (
     <>
-      <Nav>
-          <NavLink to="/">
-            <Logo>
-              <GiChargingBull size={40} />
-            </Logo>
+      <Nav onClick={()=>ChangeClick()}>
+        <Logo href="/">
+          <GiChargingBull size={40} />
+        </Logo>
+        <NavMenu click={click}>
+          <NavLink to="/" exact activeStyle>
+            Home
           </NavLink>
-          <Burger />
-          <NavMenu>
-            <NavLink to="/about" activeStyle>
-              About
-            </NavLink>
-            <NavLink to="/art" activeStyle>
-              Art
-            </NavLink>
-          </NavMenu>
+          <NavLink to="/about" activeStyle>
+            Información
+          </NavLink>
+          <NavLink to="/art" activeStyle>
+            Galería
+          </NavLink>
+        </NavMenu>
+        <Burger onClick={()=>ChangeClick()}>
+        {click ? <FaTimes size={25}/> : <FaBars size={25}/>}
+        </Burger>
       </Nav>
     </>
   );
