@@ -1,9 +1,15 @@
 @import url('https://fonts.google.com/share?selection.family=Sora:wght@100;400;700');
 
+@import url('https://fonts.google.com/share?selection.family=Merriweather:wght@700%7CSora:wght@100;400;700');
+
 
 *{
     font-family: 'Sora', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+h1{
+    font-family: 'Merriweather', san-serif;
 }

@@ -32,6 +32,7 @@ const Button = styled.button`
   &:hover {
     background-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-5px);
+    border: 1px solid white;
   }
 `;
 
@@ -49,7 +50,7 @@ const HomeSection = () => {
   return (
     <>
       <Container>
-        <Img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60" />
+        <Img src="https://scontent.fgdl5-1.fna.fbcdn.net/v/t1.6435-9/53061944_2524312214309950_7419359981532610560_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=Sk8Aixhy8X4AX-k-F_M&_nc_ht=scontent.fgdl5-1.fna&oh=00_AT-sOZzbwic3BCOFXNjctTdVLTIApbpcSbZL0ftgVlZssQ&oe=61EABD00" />
         <Info>
           <NavLink to="/about" activeStyle>
             <Button>Contáctame</Button>
@@ -57,9 +58,9 @@ const HomeSection = () => {
         </Info>
       </Container>
       <Container>
-        <Img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60" />
+        <Img src="https://scontent.fgdl5-1.fna.fbcdn.net/v/t31.18172-8/20543731_1586010551473459_2041133174688418614_o.jpg?_nc_cat=111&ccb=1-5&_nc_sid=730e14&_nc_ohc=YgHwQRczN0YAX94d0zI&_nc_ht=scontent.fgdl5-1.fna&oh=00_AT8c0x_1x588L-YUFtymfAov4BX4sDhag-vZ_I5FLPWnVw&oe=61EC29F0" />
         <Info>
-        <NavLink to="/art" activeStyle>
+          <NavLink to="/art" activeStyle>
             <Button>Ver arte</Button>
           </NavLink>
         </Info>

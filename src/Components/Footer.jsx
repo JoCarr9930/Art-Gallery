@@ -50,13 +50,13 @@ const Icon = styled.a`
 const Footer = () => {
   return (
     <FooterContainer>
-      <Name>Mauricio Carrizales &copy;</Name>
+      <Name>Mauricio Carrizalez &copy;</Name>
 
       <Media>
-        <Icon href="https://www.facebook.com">
+        <Icon href="https://www.facebook.com/mauricio.carrizalez.7" target="_blank">
           <AiOutlineFacebook size={20} />
         </Icon>
-        <Icon>
+        <Icon href="https://instagram.com/mauriciocarrizalezvidrialez" target="_blank">
           <AiOutlineInstagram size={20} />
         </Icon>
       </Media>
