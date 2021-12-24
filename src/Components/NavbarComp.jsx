@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { GiChargingBull } from "react-icons/gi";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
@@ -8,14 +8,17 @@ const Nav = styled.nav`
   height: 10vh;
   display: flex;
   padding: 0 2rem;
+  width: 100%;
   background: #000103;
   justify-content: space-between;
   align-items: center;
   z-index: 999;
+  position: ${({ click }) => (click ? "fixed" : "")};
+  top: ${({ click }) => (click ? 0 : "")};
 `;
 
 const NavLink = styled(Link)`
-  color: #FFFFFA;
+  color: #fffffa;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -23,10 +26,9 @@ const NavLink = styled(Link)`
   padding: 15px 30px;
   cursor: pointer;
 
-  
   &:hover {
-    border-bottom: 3px solid #4A6FA5;
-    color: #4A6FA5;
+    border-bottom: 3px solid #4a6fa5;
+    color: #4a6fa5;
   }
 
   @media screen and (max-width: 504px) {
@@ -55,7 +57,7 @@ const NavMenu = styled.div`
     position: absolute;
     flex-direction: column;
     top: 8vh;
-    left: ${({click})=>(click ? 0 : '-100%')};
+    left: ${({ click }) => (click ? 0 : "-100%")};
     background: #000103;
     justify-content: center;
     text-align: center;
@@ -63,24 +65,25 @@ const NavMenu = styled.div`
     width: 100%;
     margin: 0;
     transition: all 150ms ease-in-out;
+    z-index: 999;
   }
 `;
 
-const Logo = styled.a`
-  color: #FFFFFA;
+const Logo = styled(Link)`
+  color: #fffffa;
   cursor: pointer;
 `;
 
 const NavbarComp = () => {
-const [click, setClick] = useState(false);
+  const [click, setClick] = useState(false);
 
-const ChangeClick = ()=>{
-  setClick(!click);
-}
+  const ChangeClick = () => {
+    setClick(!click);
+  };
   return (
     <>
-      <Nav onClick={()=>ChangeClick()}>
-        <Logo href="/">
+      <Nav onClick={() => ChangeClick()} click={click}>
+        <Logo to="/" onClick={() => ChangeClick()}>
           <GiChargingBull size={40} />
         </Logo>
         <NavMenu click={click}>
@@ -94,8 +97,8 @@ const ChangeClick = ()=>{
             Galería
           </NavLink>
         </NavMenu>
-        <Burger onClick={()=>ChangeClick()}>
-        {click ? <FaTimes size={25}/> : <FaBars size={25}/>}
+        <Burger onClick={() => ChangeClick()}>
+          {click ? <FaTimes size={25} /> : <FaBars size={25} />}
         </Burger>
       </Nav>
     </>
