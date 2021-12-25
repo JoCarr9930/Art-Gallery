@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import ErrorPage from "../Components/ErrorPage";
 
 const NotFound = () => {
-    return (
-        <div>
-            404!
-        </div>
-    )
-}
+  return <ErrorPage />;
+};
 
-export default NotFound
+export default NotFound;

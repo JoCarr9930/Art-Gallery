@@ -9,12 +9,12 @@ const FormContainer = styled.div`
 `;
 
 const Contact = styled.h1`
-    color: #fffffa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-`
+  color: #fffffa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
 
 const Form = styled.form`
   display: flex;
@@ -28,14 +28,25 @@ const Form = styled.form`
 const ContactForm = () => {
   return (
     <FormContainer>
-        <Contact>Contact Me</Contact>
+      <Contact>Contact Me</Contact>
       <Form>
         <label htmlFor="name"></label>
         <input type="text" placeholder="nombre" className="name" id="name" />
         <label htmlFor="email"></label>
-        <input type="text" placeholder="email" className="email" id="email" />
-        <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
-        <button>Submit</button>
+        <input
+          type="text"
+          placeholder="Correo Electrónico"
+          className="email"
+          id="email"
+        />
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          placeholder="Descripción"
+        ></textarea>
+        <button>Entregar</button>
       </Form>
     </FormContainer>
   );
