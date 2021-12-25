@@ -35,6 +35,9 @@ const NavLink = styled(Link)`
     height: 20%;
     padding: 0px 30px;
   }
+  @media screen and (min-width: 1500px) {
+    font-size: 2rem;
+  }
 `;
 
 const Burger = styled.div`
@@ -82,13 +85,13 @@ const NavbarComp = () => {
   };
   return (
     <>
-      <Nav onClick={() => ChangeClick()} click={click}>
-        <Logo to="/" onClick={() => ChangeClick()}>
+      <Nav onClick={() => ChangeClick()} click={false}>
+        <Logo to="/">
           <GiChargingBull size={40} />
         </Logo>
         <NavMenu click={click}>
           <NavLink to="/" exact activeStyle>
-            Home
+            Inicio
           </NavLink>
           <NavLink to="/about" activeStyle>
             Información
