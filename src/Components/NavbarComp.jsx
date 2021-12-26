@@ -9,12 +9,12 @@ const Nav = styled.nav`
   display: flex;
   padding: 0 2rem;
   width: 100%;
-  background: #000103;
+  background: transparent;
   justify-content: space-between;
   align-items: center;
   z-index: 999;
-  position: ${({ click }) => (click ? "fixed" : "")};
-  top: ${({ click }) => (click ? 0 : "")};
+  position: ${({ click }) => (click ? "fixed" : "absolute")};
+  top: 0;
 `;
 
 const NavLink = styled(Link)`
@@ -57,9 +57,9 @@ const NavMenu = styled.div`
   margin: 0 5rem;
 
   @media screen and (max-width: 504px) {
-    position: absolute;
+    position: fixed;
     flex-direction: column;
-    top: 8vh;
+    top: 0;
     left: ${({ click }) => (click ? 0 : "-100%")};
     background: #000103;
     justify-content: center;
@@ -68,7 +68,7 @@ const NavMenu = styled.div`
     width: 100%;
     margin: 0;
     transition: all 150ms ease-in-out;
-    z-index: 999;
+    z-index: -1;
   }
 `;
 
@@ -85,7 +85,7 @@ const NavbarComp = () => {
   };
   return (
     <>
-      <Nav onClick={() => ChangeClick()} click={false}>
+      <Nav click={click}>
         <Logo to="/">
           <GiChargingBull size={40} />
         </Logo>

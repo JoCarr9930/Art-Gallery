@@ -18,7 +18,7 @@ const GalleryItem = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  margin: 0 20px;
+  margin: 3rem 20px;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
