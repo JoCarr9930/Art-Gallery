@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import { FaArrowCircleUp } from "react-icons/fa";
 import styled from "styled-components";
 import galleryPhotos from "../Photos/PhotoData";
 
@@ -37,7 +38,52 @@ const Img = styled.img`
   }
 `;
 
+const BackToTop = styled.div`
+  display: ${({ isVisible }) => (isVisible ? "flex" : "none")};
+  align-items: right;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  bottom: 8vh;
+  right: 0;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 9999;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  p{
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+`;
+
 const Gallery = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisible = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisible);
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisible);
+    };
+  }, []);
+
   return (
     <GalleryContainer>
       <GalleryItem>
@@ -47,6 +93,10 @@ const Gallery = () => {
           })}
         </ImgContainer>
       </GalleryItem>
+      <BackToTop isVisible={isVisible} onClick={scrollToTop}>
+        <FaArrowCircleUp size={25} />
+        <p>Top</p>
+      </BackToTop>
     </GalleryContainer>
   );
 };
