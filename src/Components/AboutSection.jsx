@@ -46,7 +46,7 @@ const ImgContainer = styled.div`
   height: 100%;
   width: 100%;
   background: black center no-repeat
-    url("https://scontent.fgdl5-1.fna.fbcdn.net/v/t1.6435-9/35646002_2006263199448190_2890756965825249280_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=-xYeCbodFGcAX_Oxx6V&_nc_ht=scontent.fgdl5-1.fna&oh=00_AT-7bwaNuNhIV4pG58_ynUdOE8fgiM-GIWNj6Jcdi2Jy2A&oe=61EAADAE");
+    url("../Photos/IMG_5221.jpg");
   filter: brightness(0.6);
 `;
 

@@ -90,13 +90,13 @@ const NavbarComp = () => {
           <GiChargingBull size={40} />
         </Logo>
         <NavMenu click={click}>
-          <NavLink to="/" exact activeStyle onClick={() => ChangeClick()}>
+          <NavLink to="/" exact activeStyle onClick={() => ChangeClick(false)}>
             Inicio
           </NavLink>
-          <NavLink to="/about" activeStyle onClick={() => ChangeClick()}>
+          <NavLink to="/about" activeStyle onClick={() => ChangeClick(false)}>
             Información
           </NavLink>
-          <NavLink to="/art" activeStyle onClick={() => ChangeClick()}>
+          <NavLink to="/art" activeStyle onClick={() => ChangeClick(false)}>
             Galería
           </NavLink>
         </NavMenu>
