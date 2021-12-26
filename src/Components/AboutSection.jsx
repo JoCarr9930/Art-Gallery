@@ -6,11 +6,7 @@ const AboutContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: orange;
-
-  @media screen and (max-width: 504px) {
-    flex-direction: column;
-  }
+  background: black;
 `;
 
 const Info = styled.div`
@@ -20,7 +16,6 @@ const Info = styled.div`
   align-items: center;
   height: 100%;
   width: 75%;
-  /* padding: 30px; */
   color: white;
   position: absolute;
   z-index: 1;
@@ -41,12 +36,11 @@ const Description = styled.p`
 
 const ImgContainer = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100%;
+  align-items: center;
+  height: 100vh;
   width: 100%;
-  background: black center no-repeat
-    url("../Photos/IMG_5221.jpg");
+  background: center fixed url("https://scontent.fgdl5-1.fna.fbcdn.net/v/t1.6435-9/35646002_2006263199448190_2890756965825249280_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=g0zHcSgCpSIAX9nPMpq&_nc_ht=scontent.fgdl5-1.fna&oh=00_AT_T6kBpQWi0jj08zqKrtxjIGQIj8nb1JHuBIT6vOyRuMQ&oe=61EEA22E");
   filter: brightness(0.6);
 `;
 
@@ -54,7 +48,7 @@ const AboutSection = () => {
   return (
     <AboutContainer>
       <Info>
-        <Title>About Me</Title>
+        <Title>Sobre Mí</Title>
         <Description>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
           corporis laboriosam accusantium atque quia excepturi recusandae!
@@ -64,7 +58,7 @@ const AboutSection = () => {
           nam. Perspiciatis perferendis incidunt veniam suscipit!
         </Description>
       </Info>
-      <ImgContainer></ImgContainer>
+      <ImgContainer/>
     </AboutContainer>
   );
 };
