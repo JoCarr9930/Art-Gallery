@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Gallery from "./Pages/Gallery";
 import NotFound from "./Pages/NotFound";
+import FormSubmit from "./Pages/FormSubmit";
 import ScrollToTop from "./Utilities/Functions";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route path="/art" exact component={Gallery} />
+        <Route path="/submit" component={FormSubmit} />
         <Route component={NotFound} />
       </Switch>
       <Footer />
