@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "./ContactForm.css";
 
 const FormContainer = styled.div`
-  height: 90vh;
+  height: 50vh;
   background: black;
   padding: 20px 0;
 `;

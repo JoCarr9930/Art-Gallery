@@ -10,7 +10,7 @@ const FooterContainer = styled.div`
   position: relative;
   padding: 30px;
   justify-content: space-between;
-  z-index: 999;
+  z-index: 9999;
 
   @media screen and (max-width: 380px){
     justify-content: center;

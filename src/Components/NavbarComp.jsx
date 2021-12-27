@@ -86,12 +86,12 @@ const NavbarComp = () => {
   return (
     <>
       <Nav click={click}>
-        <Logo to="/">
+        <Logo to="/Art-Gallery/">
           <GiChargingBull size={40} />
         </Logo>
         <NavMenu click={click}>
           <NavLink
-            to="/"
+            to="/Art-Gallery/"
             exact
             activeStyle
             onClick={() => {
@@ -101,7 +101,7 @@ const NavbarComp = () => {
             Inicio
           </NavLink>
           <NavLink
-            to="/about"
+            to="/Art-Gallery/about"
             activeStyle
             onClick={() => {
               setClick(false);
@@ -110,7 +110,7 @@ const NavbarComp = () => {
             Información
           </NavLink>
           <NavLink
-            to="/art"
+            to="/Art-Gallery/art"
             activeStyle
             onClick={() => {
               setClick(false);
