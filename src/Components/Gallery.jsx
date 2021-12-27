@@ -27,6 +27,9 @@ const ImgContainer = styled.div`
 `;
 
 const Img = styled.img`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 25%;
   padding: 20px;
   object-fit: cover;
@@ -95,7 +98,7 @@ const Icon = styled.div`
   align-items: center;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     transform: scale(1.2);
   }
 `;
