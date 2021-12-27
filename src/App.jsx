@@ -17,7 +17,7 @@ function App() {
       <ScrollToTop />
       <Switch>
         <Route
-          path="https://jocarr9930.github.io/Art-Gallery/"
+          path="/Art-Gallery/"
           exact
           component={Home}
         />
