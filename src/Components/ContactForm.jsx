@@ -42,7 +42,7 @@ const ContactForm = () => {
         <input
           type="hidden"
           name="_next"
-          value="http://localhost:3000/submit"
+          value="https://jocarr9930.github.io/Art-Gallery/submit"
         />
 
         <input type="text" placeholder="nombre" name="Nombre" required />
