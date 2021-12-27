@@ -41,7 +41,7 @@ const ContactForm = () => {
         <input
           type="hidden"
           name="_next"
-          value="https://jocarr9930.github.io/Art-Gallery/submit"
+          value="/Art-Gallery/submit"
         />
         <input type="text" placeholder="nombre" name="Nombre" required />
         <input
@@ -59,10 +59,7 @@ const ContactForm = () => {
           placeholder="descripción"
           required
         ></textarea>
-        <Link to="/Art-Gallery/submit">
-          <button>Entregar</button>
-        </Link>
-        ;
+        <button>Entregar</button>
       </Form>
     </FormContainer>
   );

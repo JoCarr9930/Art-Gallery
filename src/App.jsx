@@ -19,11 +19,7 @@ function App() {
         <Route path="/Art-Gallery/" exact component={Home} />
         <Route path="/Art-Gallery/about" exact component={About} />
         <Route path="/Art-Gallery/art" exact component={Gallery} />
-        <Route
-          path="https://jocarr9930.github.io/Art-Gallery/submit"
-          exact
-          component={FormSubmit}
-        />
+        <Route path="/Art-Gallery/submit" exact component={FormSubmit} />
         <Route component={NotFound} />
       </Switch>
       <Footer />
