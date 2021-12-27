@@ -16,11 +16,7 @@ function App() {
       <NavbarComp />
       <ScrollToTop />
       <Switch>
-        <Route
-          path="/Art-Gallery/"
-          exact
-          component={Home}
-        />
+        <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route path="/art" exact component={Gallery} />
         <Route path="/submit" component={FormSubmit} />
