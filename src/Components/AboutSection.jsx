@@ -39,9 +39,16 @@ const ImgContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100%;
-  background: center fixed url("https://scontent.fgdl5-1.fna.fbcdn.net/v/t1.6435-9/35646002_2006263199448190_2890756965825249280_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=g0zHcSgCpSIAX9nPMpq&_nc_ht=scontent.fgdl5-1.fna&oh=00_AT_T6kBpQWi0jj08zqKrtxjIGQIj8nb1JHuBIT6vOyRuMQ&oe=61EEA22E");
   filter: brightness(0.6);
+`;
+
+const Image = styled.img`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 `;
 
 const AboutSection = () => {
@@ -58,7 +65,9 @@ const AboutSection = () => {
           nam. Perspiciatis perferendis incidunt veniam suscipit!
         </Description>
       </Info>
-      <ImgContainer/>
+      <ImgContainer>
+        <Image src="https://scontent.fgdl5-1.fna.fbcdn.net/v/t1.6435-9/103396649_3904480959626395_8296736258659740141_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=6eUnpio_OpcAX8kCQlC&tn=DJnaaH7AB4RGKs_3&_nc_ht=scontent.fgdl5-1.fna&oh=00_AT8O0y1Y9AJKkZ3BIxKz2AB0tHmYq37E-IDx9IHD-zcE7Q&oe=61ED7B06" />
+      </ImgContainer>
     </AboutContainer>
   );
 };
