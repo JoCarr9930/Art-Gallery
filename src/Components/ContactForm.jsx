@@ -30,8 +30,7 @@ const ContactForm = () => {
     <FormContainer>
       <Contact>Contáctame</Contact>
       <Form
-        action="https://formsubmit.co/f23ee78251f79b7415b1120a8f9453c7
-        "
+        action="https://formsubmit.co/f23ee78251f79b7415b1120a8f9453c7"
         method="POST"
       >
         {/* HoneyPot */}
