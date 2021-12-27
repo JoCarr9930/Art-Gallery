@@ -93,6 +93,7 @@ const Icon = styled.div`
   margin-top: 2px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 const Gallery = () => {
