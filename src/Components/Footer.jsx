@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { AiOutlineFacebook } from "react-icons/ai";
+import { AiOutlineInstagram, AiOutlineFacebook } from "react-icons/ai";
+import { BsFacebook, BsInstagram } from "react-icons/bs";
 
 const FooterContainer = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ const FooterContainer = styled.div`
   justify-content: space-between;
   z-index: 9999;
 
-  @media screen and (max-width: 380px){
+  @media screen and (max-width: 380px) {
     justify-content: center;
     align-items: center;
   }
@@ -26,8 +26,8 @@ const Name = styled.div`
   font-weight: 100;
   font-size: 0.8rem;
 
-  @media screen and (max-width: 380px){
-    display:none;
+  @media screen and (max-width: 380px) {
+    display: none;
   }
 `;
 
@@ -37,13 +37,17 @@ const Media = styled.div`
 `;
 
 const Icon = styled.a`
-  color: #FFFFFA;
+  color: #fffffa;
   cursor: pointer;
   padding: 0 10px;
 
   &:hover {
     transform: scale(1.2);
-    color: #4A6FA5;
+    color: #4a6fa5;
+  }
+
+  @media screen and (max-width: 380px) {
+    font-size: 2rem;
   }
 `;
 
@@ -53,11 +57,17 @@ const Footer = () => {
       <Name>Mauricio Carrizalez &copy;</Name>
 
       <Media>
-        <Icon href="https://www.facebook.com/mauricio.carrizalez.7" target="_blank">
-          <AiOutlineFacebook size={20} />
+        <Icon
+          href="https://www.facebook.com/mauricio.carrizalez.7"
+          target="_blank"
+        >
+          <BsFacebook size={23} />
         </Icon>
-        <Icon href="https://instagram.com/mauriciocarrizalezvidrialez" target="_blank">
-          <AiOutlineInstagram size={20} />
+        <Icon
+          href="https://instagram.com/mauriciocarrizalezvidrialez"
+          target="_blank"
+        >
+          <BsInstagram size={23} />
         </Icon>
       </Media>
     </FooterContainer>
