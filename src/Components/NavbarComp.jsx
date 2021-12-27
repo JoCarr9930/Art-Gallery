@@ -86,12 +86,12 @@ const NavbarComp = () => {
   return (
     <>
       <Nav click={click}>
-        <Logo to="/">
+        <Logo to="/Art-Gallery/">
           <GiChargingBull size={40} />
         </Logo>
         <NavMenu click={click}>
           <NavLink
-            to="/"
+            to="/Art-Gallery/"
             exact
             activeStyle
             onClick={() => {
