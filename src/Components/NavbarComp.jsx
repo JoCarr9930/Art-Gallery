@@ -101,7 +101,7 @@ const NavbarComp = () => {
             Inicio
           </NavLink>
           <NavLink
-            to="/about"
+            to="/Art-Gallery/about"
             activeStyle
             onClick={() => {
               setClick(false);
@@ -110,7 +110,7 @@ const NavbarComp = () => {
             Información
           </NavLink>
           <NavLink
-            to="/art"
+            to="/Art-Gallery/art"
             activeStyle
             onClick={() => {
               setClick(false);
