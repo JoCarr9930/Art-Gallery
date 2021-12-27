@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "./ContactForm.css";
 
 const FormContainer = styled.div`
-  height: 50vh;
+  height: 75vh;
   background: black;
   padding: 20px 0;
 `;
@@ -30,8 +30,7 @@ const ContactForm = () => {
     <FormContainer>
       <Contact>Contáctame</Contact>
       <Form
-        action="https://formsubmit.co/f23ee78251f79b7415b1120a8f9453c7
-        "
+        action="https://formsubmit.co/f23ee78251f79b7415b1120a8f9453c7"
         method="POST"
       >
         {/* HoneyPot */}
