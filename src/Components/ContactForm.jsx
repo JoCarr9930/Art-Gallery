@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./ContactForm.css";
 
@@ -41,7 +40,7 @@ const ContactForm = () => {
         <input
           type="hidden"
           name="_next"
-          value="https://jocarr9930.github.io/Art-Gallery/"
+          value="https://jocarr9930.github.io/Art-Gallery/submit"
         />
         <input type="text" placeholder="nombre" name="Nombre" required />
         <input
