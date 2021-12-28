@@ -17,10 +17,10 @@ function App() {
       <ScrollToTop />
       <Switch>
         <Route path="/Art-Gallery/" exact component={Home} />
-        <Route path="/Art-Gallery/about" exact component={About} />
-        <Route path="/Art-Gallery/art" exact component={Gallery} />
-        <Route path="/Art-Gallery/submit" exact component={FormSubmit} />
-        <Route component={NotFound} />
+        <Route path="/Art-Gallery/about" component={About} />
+        <Route path="/Art-Gallery/art" component={Gallery} />
+        <Route path="/Art-Gallery/submit" component={FormSubmit} />
+        <Route path="*" component={NotFound} />
       </Switch>
       <Footer />
     </Router>
