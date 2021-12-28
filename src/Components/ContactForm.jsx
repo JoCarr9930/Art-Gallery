@@ -41,7 +41,7 @@ const ContactForm = () => {
         <input
           type="hidden"
           name="_next"
-          value="/Art-Gallery/submit"
+          value="https://jocarr9930.github.io/Art-Gallery/"
         />
         <input type="text" placeholder="nombre" name="Nombre" required />
         <input
