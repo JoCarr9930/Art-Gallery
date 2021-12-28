@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./ContactForm.css";
 
@@ -35,16 +36,13 @@ const ContactForm = () => {
       >
         {/* HoneyPot */}
         <input type="text" name="_honey" style={{ display: "none" }} />
-
         {/* Disable Captcha */}
         <input type="hidden" name="_captcha" value="false" />
-
         <input
           type="hidden"
           name="_next"
-          value="https://jocarr9930.github.io/Art-Gallery/submit"
+          value="https://jocarr9930.github.io/Art-Gallery/"
         />
-
         <input type="text" placeholder="nombre" name="Nombre" required />
         <input
           type="email"
